@@ -1,20 +1,26 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "allowJs": true,
     "module": "commonjs",
+    "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
     "skipLibCheck": true,
     "esModuleInterop": true,
+    "declaration": false,
     "noImplicitAny": true,
+    "composite": false,
     "sourceMap": true,
     "baseUrl": ".",
     "outDir": "dist",
+    "rootDir": "src",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "src/**/*"
-  ]
+  "extends": "./jsconfig.json",
+  "include": ["src/**/*"]
 }

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@views": ["src/renderer/views"],
+      "@components": ["src/renderer/components"],
+      "@layouts": ["src/renderer/layouts"],
+      "@routes": ["src/renderer/routes.js"]
+    }
+  },
+  "exclude": ["node_modules"]
+}

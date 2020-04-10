@@ -51,8 +51,8 @@
               "config": "./webpack.renderer.config.js",
               "entryPoints": [
                 {
-                  "html": "./src/index.html",
-                  "js": "./src/renderer.ts",
+                  "html": "./static/index.html",
+                  "js": "./src/renderer/index.tsx",
                   "name": "main_window"
                 }
               ]
@@ -75,9 +75,19 @@
     "css-loader": "^3.0.0",
     "electron": "8.2.1",
     "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
     "fork-ts-checker-webpack-plugin": "^3.1.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.3",
     "node-loader": "^0.6.0",
+    "prettier": "^2.0.4",
     "style-loader": "^0.23.1",
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.0"
@@ -85,8 +95,18 @@
   "dependencies": {
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "@types/react-router-dom": "^5.1.3",
     "electron-squirrel-startup": "^1.0.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
   }
 }

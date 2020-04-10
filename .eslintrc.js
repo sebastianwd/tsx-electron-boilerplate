@@ -1,0 +1,58 @@
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    project: './tsconfig.json',
+    tsconfigRootDir: '.',
+  },
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+  },
+  extends: [
+    'airbnb-typescript',
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+  ],
+  settings: {
+    'import/core-modules': ['electron'],
+    react: {
+      version: 'detect',
+    },
+  },
+  plugins: [
+    '@typescript-eslint',
+    'prettier',
+    'promise',
+    'jsx-a11y',
+    'react-hooks',
+    'react',
+  ],
+  rules: {
+    'prettier/prettier': 'error',
+    'no-unused-vars': 'warn',
+    'no-console': 'off',
+    'react/jsx-one-expression-per-line': 0,
+    'react/prop-types': 0,
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'react/jsx-props-no-spreading': 0,
+    'object-shorthand': 'off',
+    'class-methods-use-this': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'global-require': 'off',
+    'import/extensions': 'off',
+    strict: 0,
+  },
+}
